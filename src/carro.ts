@@ -11,9 +11,19 @@ class carro {
     const result = distancia / this.consumo;
     this.nivelCombustivel -= result;
   }
+
+  obterGasolina(): number {
+    return this.nivelCombustivel;
+  }
+
+  addGasolina(quantidade: number): void {
+    this.nivelCombustivel += quantidade;
+  }
 }
 
-const fiesta = new carro(4.5, 30);
+const fiesta = new carro(4.5, 0);
+
+fiesta.addGasolina(30);
 
 fiesta.andar(16);
 
